@@ -1,7 +1,7 @@
 
 # Team-Profile-Generator
 
-<img src="https://github.com/mdgragg/team-profile-generator/blob/master/assets/images/screenshots/html.png?raw=true" width="600" />
+<img src="https://github.com/mdgragg/team-profile-generator/blob/master/assets/images/screenshots/html.png?raw=true" width="700" />
 
 ## Description
 
@@ -9,7 +9,7 @@
 ## Table of Contents
 * [Installation](#installation)
 * [Usage](#usage)
-* [contribution](#contribution)
+* [Contribution](#contribution)
 * [Tests](#tests)
 * [Questions](#questions)
 
@@ -30,7 +30,7 @@ Pull request welcome or see contact info in questions section
 
 ## Tests
 ```
-npm run tests
+npm run test
 ```
 
 ![Demo](https://github.com/mdgragg/team-profile-generator/blob/master/assets/images/screenshots/tests.png?raw=true)
