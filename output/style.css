@@ -1,0 +1,24 @@
+body {background: #c5c6c7}
+
+.jumbotron {background: #000000;}
+.jumbotron img {width: 350px; }
+
+.employee-manager, .employee-engineer, .employee-intern {
+    color: white;
+    text-align: center;
+    margin-top: -40px;
+    margin-left: 25px;
+    margin-right: 25px;
+    padding: 10px 20px;
+}
+
+.employee-manager { background: #012345;}
+.employee-engineer {background: #234567;}
+.employee-intern {background: #456789;}
+
+
+.card { min-width: 300px; max-width: 500px; margin-top: 40px;}
+.card-title {font-family: 'Anton', sans-serif;}
+.team-area { margin-top: 20px;}
+
+.card-title {margin-top: 20px; text-transform: uppercase; font-weight: 600; text-align: center; }

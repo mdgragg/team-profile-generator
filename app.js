@@ -10,11 +10,17 @@ const outputPath = path.join(OUTPUT_DIR, "team.html");
 
 const render = require("./lib/htmlRenderer");
 
+// Creating 
+function buildTeam() {
+    const finishedHtml = render(employees);
+   fs.writeFileSync(outputPath, finishedHtml);
+};
+
 let employees = [];
 
 inquirer.prompt([
     {
-        // name, email, office number
+        // Prompts for manager
         type: "input",
         message: "Enter manager's name:",
         name: "name"
@@ -37,12 +43,11 @@ inquirer.prompt([
     .then(function(response){
         const manager = new Manager(response.name, response.id, response.email, response.officeNumber)
         employees.push(manager)
-        // push manager information into employees array
     }).then(function(){
         newEmployee();
     })
-     // Ask information for employee
 
+     // Adding more employees
 function newEmployee(){            
     inquirer.prompt({
         type: "confirm",
@@ -54,10 +59,14 @@ function newEmployee(){
     }
     else {
         render(employees);
+        buildTeam();
+        console.log("Team has been generated!");
+
     }
 })
-
 }
+
+
 
 function employeeInfo(){
     inquirer.prompt([
@@ -96,10 +105,12 @@ function employeeInfo(){
                     message: "Enter employee's GitHub user name:",
                     name: "github"
                 }
+                
             ]).then(function(response){
                 const engineer = new Engineer(tempName, tempID, tempEmail, response.github)
                 employees.push(engineer)
                 newEmployee();
+                
             })
         }
         // if intern, ask school
@@ -116,8 +127,10 @@ function employeeInfo(){
                     newEmployee();
             })
         }
+        
     })
 }
+
 
 
 // Write code to use inquirer to gather information about the development team members,
